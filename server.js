@@ -39,7 +39,8 @@ http.createServer(function(request, response) {
             }
 
             v.instance = process.env['CF_INSTANCE_INDEX'] || 'N/A';
-
+            v.message = process.env['SUSECON_MSG'] || '';
+            
             fs.readFile(t, 'utf8', function(err, data) {
                 var html = mustache.to_html(data, v);
                 response.writeHead(200);
