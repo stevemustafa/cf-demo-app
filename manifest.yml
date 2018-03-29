@@ -1,6 +1,6 @@
 ---
 applications:
 - name: cf-demo-app
-  host: cf-demo-app
+  random-route: true
   description : Simple demo that prints the server's environment variables.
   memory: 64M
